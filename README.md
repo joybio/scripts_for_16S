@@ -1,5 +1,5 @@
 # scripts_for_16S
-#first step
+#first step. Caution: samples name can't have "_", "-" and "." .
 
 nohup sh 16S_pipeline2.sh 2>&1 > log &
 
