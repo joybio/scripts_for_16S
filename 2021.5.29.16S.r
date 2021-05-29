@@ -1,5 +1,5 @@
 rm(list=ls())
-setwd("D://项目/2021.5.29.hfq.2.16S/")
+setwd("D://项目/test/")
 library(dplyr)
 library(reshape2)
 library(tidyr)
