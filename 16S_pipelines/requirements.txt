@@ -1,0 +1,10 @@
+# This file may be used to create an environment using:
+# $ conda create --name snakemake-tutorial -c bioconda --file <this file>
+python=2.7.17
+snakemake=5.5.4
+r-base=4.1.0
+biom-format
+r-biom
+bioconductor-microbiome
+
+

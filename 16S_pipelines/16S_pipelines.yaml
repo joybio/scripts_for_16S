@@ -1,0 +1,49 @@
+---
+################################################################################
+# directories
+################################################################################
+# directory, where is/are the input fastq.gz file(s) located
+input_dir: /media/ruizhi/NGS/2021.5.27.2.16S
+
+# directory, in which the pipeline writes all output files (relative to current directory)
+# (this also includes the summary files)
+results_dir: /media/ruizhi/NGS/2021.5.27.2.16S/results
+
+# directory to write the log-files, created during processing, to 
+log_dir: /media/ruizhi/NGS/2021.5.27.2.16S/logs
+
+################################################################################
+# sample(s) information
+################################################################################
+# name(s) of the input fastq file(s)
+# if the sample is named: sample1_combined.R1.fastq.gz:
+# please type here: sample1
+# this name is used throughout the entire pipeline as name for the output samples
+samples:
+  - EMFAC1
+  - SJK
+#  - input-1
+#  - input-2
+#  - OED-1
+#  - OED-2
+
+group: /media/ruizhi/NGS/2021.5.27.2.16S/group
+#ids,type
+#input.1,control
+#input.2,control
+#OED.1,treat
+#OED.2,treat
+refdb: /media/ruizhi/database/16S
+
+#!make sure that you have write file:group.csv 
+################################################################################
+# read_preprocessing
+################################################################################
+
+
+
+
+
+
+
+
