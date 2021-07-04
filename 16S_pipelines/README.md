@@ -10,6 +10,7 @@ Download/Provide all necessary files:
 
 usearch
 QIMMI
+python2
 # snakemake
 Snakemake is a workflow management system that helps to create and execute data processing pipelines. It requires python3 and can be most easily installed via the bioconda package of the python anaconda distribution.
 
