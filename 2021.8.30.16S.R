@@ -231,7 +231,7 @@ for (i in Taxonomy){
       Taxonomy_ID_num_norm <- apply(Taxonomy_ID_num,2,function(x)x*50000/(sum(x)))
       Taxonomy_ID_num_norm <- Taxonomy_ID_num_norm[order(rowSums(Taxonomy_ID_num_norm),decreasing = T),]
       Taxonomy_ID_num_norm <- apply(Taxonomy_ID_num_norm,2,round)
-      Taxonomy_ID_num_norm <- as.data.frame(t(Taxonomy_ID_num_norm))
+      Taxonomy_ID_num_norm <- as.data.frame(t(Taxonomy_ID_num_norm))}
       #计算index并画boxplot
       for (p in index){
       specific_csv <- paste0(Alpha_directory_5.1,eval(p),"_index.csv")
@@ -321,13 +321,14 @@ for (i in Taxonomy){
         geom_text(data = dend_data$labels, aes(x, y, label = label),
                 size = 5,check_overlap = T,angle=45,vjust = 3)#,
       #nudge_y = -0.02)
-      ggsave(tree_pdf,height = 10,width = 15)
+      ggsave(tree_pdf,height = 15,width = 20)
       #PCA分析（主成分分析）
       taxa<-Taxonomy_ID_num_norm
       taxa[is.na(taxa)]<-0
       taxa <- taxa[,which(colSums(taxa) > 0)]
       meta <- read.table("2.OTU table/group.csv",sep=",",header = T,row.names = 1)
       #计算PCA值
+      colnames(meta) <- c("Group")
       pca<-prcomp(taxa,scale. = T)
       #作图
       PCA_pdf <- paste0(Beta_directory_main,"PCA.pdf")
