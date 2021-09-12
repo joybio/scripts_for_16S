@@ -145,7 +145,7 @@ for (i in Taxonomy){
   gheatmap(p, norm, offset = .15, width=3, font.size=1, colnames_angle=-45, hjust=-.1)
   ggsave(tree_heatmap_pdf)
 }
-
+Taxonomy <- c("Phylum","Class","Order","Family","Genus","Species")
 for (i in Taxonomy){
   ID <- eval(i)
   Alpha_directory_main <- paste0("5.Alpha diversity/",ID,"/")
